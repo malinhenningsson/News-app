@@ -10,9 +10,8 @@ class Navbar extends React.Component {
                 </Link>
                 <ul className="navbar-list">
                     <Link to="/">
-                        <li className="navbar-items">Home</li>
+                        <li className="navbar-items">Top headlines</li>
                     </Link>
-                    <li className="navbar-items">Genres</li>
                     <Link to="/search">
                         <li className="navbar-items">Search</li>
                     </Link>

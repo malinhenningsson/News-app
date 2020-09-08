@@ -17,7 +17,7 @@ const LatestNews = () => {
                     <h3>{article.title}</h3>
                     <p><span className="small-info-text">Published: {article.publishedAt}</span></p>
                     <p>{article.content}</p>
-                    <p><span className="small-info-text">Read more: {article.url}</span></p> 
+                    <a href={article.url} className="read-more-link">Read more</a> 
                 </div>
             </div>
         ))
@@ -25,7 +25,7 @@ const LatestNews = () => {
 
     return (
         <div>
-            <h1>The Latest News</h1>
+            <h1>The Top Headlines</h1>
 
             {
                 isLoading ? (
@@ -38,7 +38,7 @@ const LatestNews = () => {
                         </div>
                     ) : (
                         data && data.articles ? (
-                            <div className="latest-news-articles">
+                            <div className="news-articles">
                                 {renderFetchedResult(data.articles)}
                             </div>
                         ) : (
