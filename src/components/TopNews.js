@@ -25,11 +25,11 @@ const LatestNews = () => {
 
     return (
         <div>
-            <h1>The Top Headlines</h1>
+            <h1>Top Headlines</h1>
 
             {
                 isLoading ? (
-                    <h2>Loading...</h2>
+                    <div class="loader"></div>
                 ) : (
                     error ? (
                         <div>

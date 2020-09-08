@@ -52,7 +52,7 @@ const NewsSearch = () => {
 
             {
                 isLoading ? (
-                    <h2>Loading...</h2>
+                    <div class="loader"></div>
                 ) : (
                     error ? (
                         <div>
