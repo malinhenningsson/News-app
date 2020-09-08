@@ -146,6 +146,7 @@ input {
 
 form button {
   padding: 0.5em 0.75em;
+  margin-bottom: 1em;
   font-size: 1em;
   background-color: #555;
   color: #fff;
@@ -155,4 +156,24 @@ form button {
 
 form button:hover {
   background-color: #444;
+}
+
+div.search-result {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-result-item {
+  margin: 1em 0;
+  border-bottom: 1px solid #c4c4c4;
+  text-align: justify;
+}
+
+.search-result-item h3 {
+  margin-bottom: 0.75em;
+}
+
+.search-result-item p {
+  margin-bottom: 0.25em;
 }
