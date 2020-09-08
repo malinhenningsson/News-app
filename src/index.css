@@ -8,13 +8,18 @@ Main App Styles
 }
 
 body {
-  background-color: #333;
-  color: #fff;
+  background-color: #efefef;
+  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lusitana', serif;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -28,12 +33,12 @@ a:hover {
 }
 
 nav {
-  background-color: #222;
+  background-color: #333;
+  color: #fff;
   padding: 0.75em 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #666;
 }
 
 nav ul.navbar-list {
@@ -43,4 +48,61 @@ nav ul.navbar-list {
 
 .navbar-items {
   margin-left: 0.75em;
+}
+
+div.app-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+div.latest-news-articles {
+  display: grid;
+  grid-gap: 0;
+}
+
+.article-item:nth-child(odd) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.article-item:nth-child(even) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.article-item {
+  margin: 1.5em;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0px 1px 17px -2px rgba(0,0,0,0.75);
+}
+
+.article-item img {
+  width: 100%;
+}
+
+.article-item-text-content {
+   padding: 1.5em 2em;
+}
+
+.article-item h3 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+
+span.small-info-text {
+  font-size: 0.85em;
+  font-style: italic;
+  color: #555;
+}
+
+.article-item p {
+  margin-bottom: 0.75em;
 }

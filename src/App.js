@@ -11,20 +11,22 @@ function App() {
     <div className="App">
       <Navbar />
 
-      <Switch>
-        <Route exact path="/">
-          <LatestNews />
-        </Route>
+      <div className="app-container">
+        <Switch>
+          <Route exact path="/">
+            <LatestNews />
+          </Route>
 
-        <Route path="/articles/:articleId">
-          <NewsArticle />
-        </Route>
+          <Route path="/articles/:articleId">
+            <NewsArticle />
+          </Route>
 
-        <Route path="/search">
-          <NewsSearch />
-        </Route>
+          <Route path="/search">
+            <NewsSearch />
+          </Route>
 
-      </Switch>
+        </Switch>
+      </div>
     </div>
   );
 }
