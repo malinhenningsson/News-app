@@ -16,7 +16,7 @@ const LatestNews = () => {
                 <div className="article-item-text-content">
                     <h3>{article.title}</h3>
                     <p><span className="small-info-text">Published: {article.publishedAt}</span></p>
-                    <p>{article.content}</p>
+                    <p>{article.content ? article.content : article.description}</p>
                     <a href={article.url} className="read-more-link">Read more</a> 
                 </div>
             </div>

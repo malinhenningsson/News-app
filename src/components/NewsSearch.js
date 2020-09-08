@@ -23,9 +23,10 @@ const NewsSearch = () => {
         console.log(articles);
         return articles.map((article, index) => (
             <div key={index} className="search-result-item">
-                <h3>{article.title}</h3>
-                <p>Published: {article.publishedAt}</p>
-                <p>Read article</p>
+                <h2>{article.title}</h2>
+                <p><span className="small-info-text">Published: {article.publishedAt}</span></p>
+                <p>{article.description}</p>
+                <a href={article.url} className="read-more-link">Read article</a>
             </div>
         ))
     }    
