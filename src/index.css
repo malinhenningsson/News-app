@@ -17,6 +17,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: #fff;
+  font-style: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c4c4c4;
+}
+
 nav {
   background-color: #222;
   padding: 0.75em 1em;
