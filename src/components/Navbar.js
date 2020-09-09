@@ -12,6 +12,9 @@ class Navbar extends React.Component {
                     <Link to="/">
                         <li className="navbar-items">Top headlines</li>
                     </Link>
+                    <Link to="/categories">
+                        <li className="navbar-items">Categories</li>
+                    </Link>
                     <Link to="/search">
                         <li className="navbar-items">Search</li>
                     </Link>

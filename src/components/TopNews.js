@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
+import Moment from 'react-moment';
 
 const LatestNews = () => {
     const [data, isLoading, error, setUrl] = useFetch('');
@@ -12,10 +13,16 @@ const LatestNews = () => {
         console.log('Articles: ', articles);
         return articles.map((article, index) => (
             <div key={index} className="article-item">
-                <img src={article.urlToImage} alt="article related url"/>
+                {
+                    article.urlToImage ? ( 
+                        <img src={article.urlToImage} alt="article related url"/>
+                    ) : ('')
+                }
                 <div className="article-item-text-content">
                     <h3>{article.title}</h3>
-                    <p><span className="small-info-text">Published: {article.publishedAt}</span></p>
+                    <p><span className="small-info-text">
+                        <Moment format="YYYY-MM-DD hh:mm">{article.publishedAt}</Moment> (<Moment fromNow>{article.publishedAt}</Moment>)
+                    </span></p>
                     <p>{article.content ? article.content : article.description}</p>
                     <a href={article.url} className="read-more-link">Read more</a> 
                 </div>

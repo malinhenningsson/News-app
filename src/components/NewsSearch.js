@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useFetch from '../hooks/useFetch';
+import Moment from 'react-moment';
 
 const NewsSearch = () => {
     const [query, setQuery] = useState('');
@@ -24,15 +25,18 @@ const NewsSearch = () => {
         return articles.map((article, index) => (
             <div key={index} className="search-result-item">
                 <h2>{article.title}</h2>
-                <p><span className="small-info-text">Published: {article.publishedAt}</span></p>
+                <p><span className="small-info-text">
+                    <Moment format="YYYY-MM-DD hh:mm">{article.publishedAt}</Moment> (<Moment fromNow>{article.publishedAt}</Moment>)
+                </span></p>
+                <img src={article.urlToImage} alt="content related" />
                 <p>{article.description}</p>
-                <a href={article.url} className="read-more-link">Read article</a>
+                <a href={article.url} className="read-more-link">Read entire article</a>
             </div>
         ))
-    }    
+    };
 
     return (
-        <div>
+        <div className="search-container">
             <h1>Search</h1>
 
             <form onSubmit={handleSubmit}>
@@ -46,7 +50,7 @@ const NewsSearch = () => {
 						placeholder="Search for a specific topic"
 					/>
 
-					<button type="submit" className="btn btn-success">Search</button>
+					<button type="submit">Search</button>
 				</div>
 			</form>
 
