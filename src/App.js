@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import TopNews from './components/TopNews';
 import NewsArticle from './components/NewsArticle';
 import NewsSearch from './components/NewsSearch';
+import Categories from './components/Categories';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
           <Route path="/search">
             <NewsSearch />
+          </Route>
+
+          <Route path="/category/:categoryName">
+            <Categories />
           </Route>
 
         </Switch>
